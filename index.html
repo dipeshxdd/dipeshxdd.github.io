@@ -21,8 +21,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-
-/* Background Glow */
+  
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -30,7 +29,7 @@ body {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center; /* 🔥 this centers vertically */
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -40,7 +39,6 @@ body {
   padding: 20px;
 }
 
-/* Profile Section */
 .profile {
   display: flex;
   align-items: center;
@@ -48,12 +46,11 @@ body {
   margin-bottom: 50px;
 }
 
-/* LOGO IMAGE & BOUNCE EFFECT */
 .logo {
   width: 50px;
   height: 50px;
   background: #0a0a0a;
-  border-radius: 9px; /* changed from 50% */
+  border-radius: 9px;
   overflow: hidden;
   border: 2px solid rgba(255,180,0,0.3);
   animation: logoGlow 3s ease-in-out infinite alternate, logoBounce 4s ease-in-out infinite;
@@ -81,7 +78,6 @@ body {
   50% { transform: translateY(-12px); }
 }
 
-/* NAME GLOW */
 .info h4 {
   margin: 0;
   font-size: 24px;
@@ -90,7 +86,6 @@ body {
   text-shadow: 0 0 20px rgba(255,180,0,0.4);
 }
 
-/* TYPING EFFECT */
 .info p {
   margin: 6px 0 0;
   font-size: 14px;
@@ -105,7 +100,6 @@ body {
 @keyframes typing { to { width: 100%; } }
 @keyframes blink { 50% { border-color: transparent; } }
 
-/* SHINING LINKS (BUTTONS) */
 .btn {
   display: flex;
   align-items: center;
@@ -166,12 +160,12 @@ footer {
 <div class="container">
   <div class="profile">
     <div class="logo">
-      <!-- Using your resized_image.png with the bounce effect -->
+      
       <img src="https://i.postimg.cc/SQYrPYbP/resized-image.png" alt="dipeshxd" class="logo-img">
     </div>
     <div class="info">
       <h4>dipeshxd</h4>
-      <p>Security Analyst | AI Enthusiast </p>
+      <p>Security Researcher | AI Enthusiast | Co-Founder at twichat.xyz</p>
     </div>
   </div>
 
@@ -206,7 +200,6 @@ footer {
     LinkedIn
   </a>
 
-  <!-- Updated YesWeHack Icon to a cleaner Security Shield -->
   <a href="https://yeswehack.com/hunters/yathomasi" class="btn" target="_blank">
     <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
