@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,14 +79,9 @@ body {
   font-size: 14px;
   color: #888;
   white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #ffb400;
-  width: 0;
-  animation: typing 4s steps(40) forwards, blink 0.8s infinite;
+  min-height: 1.2em;
+  display: inline-block;
 }
-
-@keyframes typing { to { width: 100%; } }
-@keyframes blink { 50% { border-color: transparent; } }
 
 .btn {
   display: flex;
@@ -155,7 +149,7 @@ footer {
     </div>
     <div class="info">
       <h4>dipeshxd</h4>
-      <p>Security Analyst | AI Automation | LLM Enthusiast</p>
+      <p id="subtitle"></p>
     </div>
   </div>
 
@@ -214,5 +208,37 @@ footer {
   <footer>STAY CURIOUS • STAY SECURE</footer>
 </div>
 
+<script>
+  const titles = ["Security Analyst", "AI Automation", "LLM Enthusiast"];
+  const el = document.getElementById("subtitle");
+  let titleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = titles[titleIndex];
+    if (isDeleting) {
+      el.textContent = current.substring(0, charIndex--);
+    } else {
+      el.textContent = current.substring(0, charIndex++);
+    }
+
+    let delay = isDeleting ? 60 : 100;
+
+    if (!isDeleting && charIndex > current.length) {
+      delay = 1800;
+      isDeleting = true;
+    } else if (isDeleting && charIndex < 0) {
+      isDeleting = false;
+      charIndex = 0;
+      titleIndex = (titleIndex + 1) % titles.length;
+      delay = 400; 
+    }
+
+    setTimeout(type, delay);
+  }
+
+  type();
+</script>
 </body>
 </html>
